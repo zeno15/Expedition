@@ -1,1 +1,1 @@
-sudo apt-get install liblua5.3-dev
+sudo apt-get install liblua5.2-dev
