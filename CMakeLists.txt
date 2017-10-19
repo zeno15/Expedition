@@ -4,7 +4,11 @@ PROJECT(Expedition)
 
 IF (${CMAKE_CXX_COMPILER_ID} STREQUAL "Clang")
 	MESSAGE(STATUS "Clang system/compiler detected")
-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++14")
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++14 -stdlib=libc++")
+
+	SET(ALL_LIBS ${ALL_LIBS}
+		"-framework OpenGL"
+	)
 
 ELSEIF (${CMAKE_CXX_COMPILER_ID} STREQUAL "GNU")
 	MESSAGE(STATUS "G++ system/compiler detected")
